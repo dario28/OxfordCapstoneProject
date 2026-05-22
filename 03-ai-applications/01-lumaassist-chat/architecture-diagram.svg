@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#14113a"/>
+  <text x="80" y="90" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">LumaAssist Chat Architecture</text>
+  <text x="80" y="130" fill="#cfd2ff" font-family="Arial, Helvetica, sans-serif" font-size="22">Customer-facing LLM assistant with internal MCP tools</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="70" y="230" rx="18" ry="18" width="220" height="90" fill="#6d5efc"/>
+    <text x="180" y="265" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Web / Mobile</text>
+    <text x="180" y="295" text-anchor="middle" fill="#eef0ff" font-size="22">Chat</text>
+
+    <rect x="360" y="230" rx="18" ry="18" width="200" height="90" fill="#38336b"/>
+    <text x="460" y="265" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Amazon API</text>
+    <text x="460" y="295" text-anchor="middle" fill="#eef0ff" font-size="22">Gateway</text>
+
+    <rect x="640" y="210" rx="18" ry="18" width="250" height="100" fill="#38336b"/>
+    <text x="765" y="250" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Chat Orchestrator</text>
+    <text x="765" y="280" text-anchor="middle" fill="#eef0ff" font-size="22">Amazon ECS</text>
+
+    <rect x="980" y="130" rx="18" ry="18" width="210" height="90" fill="#38336b"/>
+    <text x="1085" y="165" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Amazon</text>
+    <text x="1085" y="195" text-anchor="middle" fill="#eef0ff" font-size="22">Bedrock</text>
+
+    <rect x="980" y="250" rx="18" ry="18" width="210" height="90" fill="#38336b"/>
+    <text x="1085" y="285" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Internal MCP</text>
+    <text x="1085" y="315" text-anchor="middle" fill="#eef0ff" font-size="22">Server on ECS</text>
+
+    <rect x="1260" y="210" rx="18" ry="18" width="210" height="90" fill="#38336b"/>
+    <text x="1365" y="245" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">CRM Context</text>
+    <text x="1365" y="275" text-anchor="middle" fill="#eef0ff" font-size="22">Customer Lookup</text>
+
+    <rect x="1260" y="330" rx="18" ry="18" width="210" height="90" fill="#38336b"/>
+    <text x="1365" y="365" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Ticketing /</text>
+    <text x="1365" y="395" text-anchor="middle" fill="#eef0ff" font-size="22">Case Status</text>
+
+    <rect x="980" y="470" rx="18" ry="18" width="230" height="90" fill="#38336b"/>
+    <text x="1095" y="505" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">OpenSearch</text>
+    <text x="1095" y="535" text-anchor="middle" fill="#eef0ff" font-size="22">Retrieval Index</text>
+
+    <rect x="1260" y="470" rx="18" ry="18" width="210" height="90" fill="#38336b"/>
+    <text x="1365" y="505" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Amazon S3</text>
+    <text x="1365" y="535" text-anchor="middle" fill="#eef0ff" font-size="22">Knowledge Base</text>
+
+    <rect x="640" y="640" rx="18" ry="18" width="250" height="90" fill="#6d5efc"/>
+    <text x="765" y="675" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Human Agent</text>
+    <text x="765" y="705" text-anchor="middle" fill="#eef0ff" font-size="22">Escalation Queue</text>
+
+    <rect x="980" y="640" rx="18" ry="18" width="170" height="90" fill="#38336b"/>
+    <text x="1065" y="675" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Datadog</text>
+    <text x="1065" y="705" text-anchor="middle" fill="#eef0ff" font-size="20">Monitoring</text>
+
+    <rect x="1190" y="640" rx="18" ry="18" width="170" height="90" fill="#38336b"/>
+    <text x="1275" y="675" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">LangSmith</text>
+    <text x="1275" y="705" text-anchor="middle" fill="#eef0ff" font-size="20">AI Traces</text>
+
+    <rect x="1400" y="640" rx="18" ry="18" width="150" height="90" fill="#38336b"/>
+    <text x="1475" y="675" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">CloudWatch</text>
+    <text x="1475" y="705" text-anchor="middle" fill="#eef0ff" font-size="20">CloudTrail</text>
+  </g>
+  <g stroke="#a78bfa" stroke-width="5" fill="none" marker-end="url(#arrow)">
+    <line x1="290" y1="275" x2="360" y2="275"/>
+    <line x1="560" y1="275" x2="640" y2="260"/>
+    <line x1="890" y1="235" x2="980" y2="175"/>
+    <line x1="890" y1="275" x2="980" y2="295"/>
+    <line x1="1190" y1="285" x2="1260" y2="255"/>
+    <line x1="1190" y1="305" x2="1260" y2="375"/>
+    <line x1="820" y1="310" x2="990" y2="470"/>
+    <line x1="1210" y1="515" x2="1260" y2="515"/>
+    <line x1="765" y1="310" x2="765" y2="640"/>
+    <line x1="890" y1="690" x2="980" y2="685"/>
+    <line x1="890" y1="700" x2="1190" y2="685"/>
+    <line x1="890" y1="710" x2="1400" y2="685"/>
+  </g>
+  <text x="80" y="845" fill="#cfd2ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Current-state risk note: test prompts, traces, and MCP tool calls may expose copied live PII.</text>
+</svg>

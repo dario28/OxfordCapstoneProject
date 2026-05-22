@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#14113a"/>
+  <text x="80" y="90" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">FraudShield Architecture</text>
+  <text x="80" y="130" fill="#cfd2ff" font-family="Arial, Helvetica, sans-serif" font-size="22">Third-party fraud model integrated into AWS decision wrapper</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="80" y="250" rx="18" ry="18" width="260" height="90" fill="#6d5efc"/>
+    <text x="210" y="285" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Payment / Onboarding /</text>
+    <text x="210" y="315" text-anchor="middle" fill="#eef0ff" font-size="22">Login Event</text>
+
+    <rect x="410" y="250" rx="18" ry="18" width="210" height="90" fill="#38336b"/>
+    <text x="515" y="285" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Amazon API</text>
+    <text x="515" y="315" text-anchor="middle" fill="#eef0ff" font-size="22">Gateway</text>
+
+    <rect x="710" y="230" rx="18" ry="18" width="260" height="100" fill="#38336b"/>
+    <text x="840" y="270" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Fraud Decision Wrapper</text>
+    <text x="840" y="300" text-anchor="middle" fill="#eef0ff" font-size="22">AWS Lambda</text>
+
+    <rect x="1060" y="180" rx="18" ry="18" width="240" height="90" fill="#38336b"/>
+    <text x="1180" y="215" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">FraudShield</text>
+    <text x="1180" y="245" text-anchor="middle" fill="#eef0ff" font-size="22">Vendor API</text>
+
+    <rect x="1060" y="320" rx="18" ry="18" width="240" height="90" fill="#38336b"/>
+    <text x="1180" y="355" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Amazon Aurora</text>
+    <text x="1180" y="385" text-anchor="middle" fill="#eef0ff" font-size="22">Fraud Decisions DB</text>
+
+    <rect x="710" y="500" rx="18" ry="18" width="240" height="90" fill="#6d5efc"/>
+    <text x="830" y="535" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Manual Review</text>
+    <text x="830" y="565" text-anchor="middle" fill="#eef0ff" font-size="22">Queue</text>
+
+    <rect x="1060" y="500" rx="18" ry="18" width="240" height="90" fill="#38336b"/>
+    <text x="1180" y="535" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">EventBridge / SQS</text>
+    <text x="1180" y="565" text-anchor="middle" fill="#eef0ff" font-size="22">Async Processing</text>
+
+    <rect x="1360" y="250" rx="18" ry="18" width="150" height="90" fill="#38336b"/>
+    <text x="1435" y="285" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Datadog</text>
+    <text x="1435" y="315" text-anchor="middle" fill="#eef0ff" font-size="20">Monitoring</text>
+
+    <rect x="1360" y="390" rx="18" ry="18" width="150" height="90" fill="#38336b"/>
+    <text x="1435" y="425" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">CloudWatch</text>
+    <text x="1435" y="455" text-anchor="middle" fill="#eef0ff" font-size="20">CloudTrail</text>
+  </g>
+  <g stroke="#a78bfa" stroke-width="5" fill="none" marker-end="url(#arrow)">
+    <line x1="340" y1="295" x2="410" y2="295"/>
+    <line x1="620" y1="295" x2="710" y2="280"/>
+    <line x1="970" y1="250" x2="1060" y2="225"/>
+    <line x1="970" y1="300" x2="1060" y2="365"/>
+    <line x1="830" y1="330" x2="830" y2="500"/>
+    <line x1="970" y1="545" x2="1060" y2="545"/>
+    <line x1="1300" y1="225" x2="1360" y2="295"/>
+    <line x1="1300" y1="365" x2="1360" y2="435"/>
+  </g>
+  <text x="80" y="845" fill="#cfd2ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Vendor output may feed downstream agent or MCP workflows, so provenance and integrity still matter.</text>
+</svg>

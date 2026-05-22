@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#14113a"/>
+  <text x="80" y="90" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">LumaCredit-EU Architecture</text>
+  <text x="80" y="130" fill="#cfd2ff" font-family="Arial, Helvetica, sans-serif" font-size="22">High-risk credit decisioning on AWS</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="80" y="220" rx="18" ry="18" width="240" height="90" fill="#6d5efc"/>
+    <text x="200" y="255" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Merchant Checkout</text>
+    <text x="200" y="285" text-anchor="middle" fill="#eef0ff" font-size="22">Lending App</text>
+
+    <rect x="400" y="220" rx="18" ry="18" width="220" height="90" fill="#38336b"/>
+    <text x="510" y="255" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Amazon API</text>
+    <text x="510" y="285" text-anchor="middle" fill="#eef0ff" font-size="22">Gateway</text>
+
+    <rect x="720" y="200" rx="18" ry="18" width="270" height="110" fill="#38336b"/>
+    <text x="855" y="245" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Decision Service</text>
+    <text x="855" y="280" text-anchor="middle" fill="#eef0ff" font-size="22">Amazon ECS</text>
+
+    <rect x="1080" y="140" rx="18" ry="18" width="230" height="90" fill="#38336b"/>
+    <text x="1195" y="175" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Amazon</text>
+    <text x="1195" y="205" text-anchor="middle" fill="#eef0ff" font-size="22">SageMaker</text>
+
+    <rect x="1080" y="270" rx="18" ry="18" width="230" height="90" fill="#38336b"/>
+    <text x="1195" y="305" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">Rules Engine</text>
+    <text x="1195" y="335" text-anchor="middle" fill="#eef0ff" font-size="22">Policy Layer</text>
+
+    <rect x="720" y="430" rx="18" ry="18" width="270" height="95" fill="#38336b"/>
+    <text x="855" y="468" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Feature Validation</text>
+    <text x="855" y="498" text-anchor="middle" fill="#eef0ff" font-size="22">Transform Service</text>
+
+    <rect x="1080" y="430" rx="18" ry="18" width="220" height="95" fill="#38336b"/>
+    <text x="1190" y="468" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Amazon Aurora</text>
+    <text x="1190" y="498" text-anchor="middle" fill="#eef0ff" font-size="22">Customer / Decision DB</text>
+
+    <rect x="1080" y="560" rx="18" ry="18" width="220" height="95" fill="#38336b"/>
+    <text x="1190" y="598" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Amazon S3</text>
+    <text x="1190" y="628" text-anchor="middle" fill="#eef0ff" font-size="22">Feature Store / Lake</text>
+
+    <rect x="720" y="690" rx="18" ry="18" width="270" height="90" fill="#6d5efc"/>
+    <text x="855" y="725" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Approve / Decline /</text>
+    <text x="855" y="755" text-anchor="middle" fill="#eef0ff" font-size="22">Manual Review Queue</text>
+
+    <rect x="1080" y="690" rx="18" ry="18" width="220" height="90" fill="#38336b"/>
+    <text x="1190" y="725" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Core Lending</text>
+    <text x="1190" y="755" text-anchor="middle" fill="#eef0ff" font-size="22">Platform</text>
+
+    <rect x="1380" y="250" rx="18" ry="18" width="150" height="90" fill="#38336b"/>
+    <text x="1455" y="285" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Datadog</text>
+    <text x="1455" y="315" text-anchor="middle" fill="#eef0ff" font-size="20">Monitoring</text>
+
+    <rect x="1380" y="390" rx="18" ry="18" width="150" height="90" fill="#38336b"/>
+    <text x="1455" y="425" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">CloudWatch</text>
+    <text x="1455" y="455" text-anchor="middle" fill="#eef0ff" font-size="20">CloudTrail</text>
+  </g>
+  <g stroke="#a78bfa" stroke-width="5" fill="none" marker-end="url(#arrow)">
+    <line x1="320" y1="265" x2="400" y2="265"/>
+    <line x1="620" y1="265" x2="720" y2="255"/>
+    <line x1="990" y1="235" x2="1080" y2="185"/>
+    <line x1="990" y1="275" x2="1080" y2="315"/>
+    <line x1="855" y1="310" x2="855" y2="430"/>
+    <line x1="990" y1="470" x2="1080" y2="470"/>
+    <line x1="990" y1="510" x2="1080" y2="600"/>
+    <line x1="855" y1="525" x2="855" y2="690"/>
+    <line x1="990" y1="735" x2="1080" y2="735"/>
+    <line x1="1310" y1="315" x2="1380" y2="295"/>
+    <line x1="1310" y1="440" x2="1380" y2="440"/>
+  </g>
+  <text x="80" y="845" fill="#cfd2ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Current-state risk note: unredacted customer PII exists in test for model validation and troubleshooting.</text>
+</svg>
