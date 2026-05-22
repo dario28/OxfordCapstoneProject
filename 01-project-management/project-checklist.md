@@ -1,7 +1,7 @@
 # Capstone Project Checklist
 
 ## 1. Assignment Setup
-- [ ] Confirm group ownership across architecture, governance, cyber, lifecycle risk, and board-pack workstreams.
+- [X] Confirm group ownership across architecture, governance, cyber, lifecycle risk, and board-pack workstreams.
 - [ ] Confirm the final submission format for Deliverable A and Deliverable B.
 - [ ] Confirm whether the one-page HLDs are an internal working asset or part of the submitted appendix.
 - [ ] Confirm any deck design or file-format expectations for Teams or OneDrive sharing.
