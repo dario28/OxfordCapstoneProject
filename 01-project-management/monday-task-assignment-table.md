@@ -8,11 +8,11 @@ Use this in the Monday meeting to assign owners quickly without missing the caps
 | Workstream | Scope | Key Output | Suggested Owner | Monday Assignee | Support | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | Lead / Integration | overall narrative, final merge, quality control | final deck and appendix integration | DQ / Lead |  |  | Not assigned |
-| Governance / Regulatory | `EU AI Act`, `GDPR`, `UK GDPR`, `ISO/IEC 42001`, `ISO/IEC 27001`, `DORA` | standards mapping, governance wording, compliance review | Person 2 |  |  | Not assigned |
+| Governance / Regulatory | `EU AI Act`, `GDPR`, `UK GDPR`, `ISO/IEC 42001`, `ISO/IEC 27001`, `DORA` | standards mapping, governance wording, compliance review | Kirsten & Micheal |  |  | Not assigned |
 | AI Cybersecurity | `NIST CSF`, `OWASP LLM`, `MITRE ATLAS`, prompt injection, `MCP`, logging, monitoring | cyber risks, control recommendations, monitoring content | Person 3 / `Amrik` |  |  | Not assigned |
-| Operational / Lifecycle | design, data, develop, deploy, monitor; drift; resilience; orphaned models | lifecycle analysis, KRIs, roadmap support | Person 4 |  |  | Not assigned |
-| Technical Design | AWS design, HLDs, integrations, data flows, vendors, diagrams | HLDs, system inventory, architecture support | Person 5 |  |  | Not assigned |
-| Board Pack / 100-Day Plan | executive wording, roadmap, board asks | Deliverable A shaping and final slide flow | Person 6 |  |  | Not assigned |
+| Operational / Lifecycle | design, data, develop, deploy, monitor; drift; resilience; orphaned models | lifecycle analysis, KRIs, roadmap support | Gabriella |  |  | Not assigned |
+| Technical Design | AWS design, HLDs, integrations, data flows, vendors, diagrams | HLDs, system inventory, architecture support | Sukhmandeep Sing |  |  | Not assigned |
+| Board Pack / 100-Day Plan | executive wording, roadmap, board asks | Deliverable A shaping and final slide flow | DQ |  |  | Not assigned |
 
 ## Deliverable Ownership
 
