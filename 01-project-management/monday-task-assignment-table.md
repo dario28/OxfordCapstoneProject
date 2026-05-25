@@ -11,7 +11,7 @@ Use this in the Monday meeting to assign owners quickly without missing the caps
 | Governance / Regulatory | `EU AI Act`, `GDPR`, `UK GDPR`, `ISO/IEC 42001`, `ISO/IEC 27001`, `DORA` | standards mapping, governance wording, compliance review | Kirsten & Micheal |  |  | Not assigned |
 | AI Cybersecurity | `NIST CSF`, `OWASP LLM`, `MITRE ATLAS`, prompt injection, `MCP`, logging, monitoring | cyber risks, control recommendations, monitoring content | Person 3 / `Amrik` |  |  | Not assigned |
 | Operational / Lifecycle | design, data, develop, deploy, monitor; drift; resilience; orphaned models | lifecycle analysis, KRIs, roadmap support | Gabriella |  |  | Not assigned |
-| Technical Design | AWS design, HLDs, integrations, data flows, vendors, diagrams | HLDs, system inventory, architecture support | Sukhmandeep Sing |  |  | Not assigned |
+| Technical Design | AWS design, HLDs, integrations, data flows, vendors, diagrams | HLDs, system inventory, architecture support | Sukhmandeep Singh |  |  | Not assigned |
 | Board Pack / 100-Day Plan | executive wording, roadmap, board asks | Deliverable A shaping and final slide flow | DQ |  |  | Not assigned |
 
 ## Deliverable Ownership
@@ -31,10 +31,10 @@ Use this in the Monday meeting to assign owners quickly without missing the caps
 
 | AI Application | Main Focus | Monday Assignee | Reviewer |
 | --- | --- | --- | --- |
-| `LumaCredit-EU` | high-risk AI, explainability, drift, credit-decision controls |  |  |
-| `LumaAssist Chat` | prompt injection, leakage, traces, `MCP` access |  |  |
-| `AutoUnderwriter Agent` | autonomy, human oversight, traceability, `MCP` scope |  |  |
-| `FraudShield` | supplier risk, continuity, opacity, fallback |  |  |
+| `LumaCredit-EU` | high-risk AI, explainability, drift, credit-decision controls |  | Sukhmandeep Singh   |
+| `LumaAssist Chat` | prompt injection, leakage, traces, `MCP` access |  |  Sukhmandeep Singh |
+| `AutoUnderwriter Agent` | autonomy, human oversight, traceability, `MCP` scope |  | Sukhmandeep Singh  |
+| `FraudShield` | supplier risk, continuity, opacity, fallback |  | Sukhmandeep Singh  |
 
 ## Must-Have Requirements Checklist
 - `8–12` slide board pack
