@@ -50,6 +50,8 @@ This workspace is aligned to the full `AI Risk in M&A` capstone brief and the re
 - [02-company-profile/lumapay-company-profile.md](/Users/dquigley/Documents/Codex/projects/capstone/02-company-profile/lumapay-company-profile.md): target company profile
 - [03-ai-applications/README.md](/Users/dquigley/Documents/Codex/projects/capstone/03-ai-applications/README.md): system inventory and per-system folders
 - [04-risk-and-controls](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls): risk register, due-diligence, standards mapping
+- [04-risk-and-controls/glossary-taxonomy-and-evidence-rules.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/glossary-taxonomy-and-evidence-rules.md): glossary-aligned taxonomy and evidence quality gate
+- [04-risk-and-controls/clause-traceability-matrix.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/clause-traceability-matrix.md): clause, article, and function traceability matrix
 - [05-deliverables](/Users/dquigley/Documents/Codex/projects/capstone/05-deliverables): board pack and appendix outlines
 
 ## Recommended Drafting Order

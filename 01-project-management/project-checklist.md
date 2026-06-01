@@ -71,6 +71,8 @@
 - [ ] Map `GDPR`, `UK GDPR`, and `UK DPA 2018` to data-flow and privacy risks.
 - [ ] Map `ISO/IEC 42001`, `27001`, `23894`, `5259`, `27036`, and `DORA`.
 - [ ] Add at least a starter set of clause or article references for each major recommendation.
+- [ ] Use [glossary-taxonomy-and-evidence-rules.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/glossary-taxonomy-and-evidence-rules.md) as the glossary and taxonomy quality gate.
+- [ ] Use [clause-traceability-matrix.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/clause-traceability-matrix.md) to validate clause, article, and function traceability.
 
 ## 8. Deliverable B1: Risk Register Extract
 - [ ] Draft `10–12` realistic AI risks.
@@ -139,6 +141,8 @@
 
 ## 14. Final Quality Review
 - [ ] Check that every recommendation is traceable to a framework or standard.
+- [ ] Check that every material control is traceable to a specific clause, article, function, or recognized control topic where available.
+- [ ] Check that all risk, due-diligence, roadmap, and board-pack wording uses the approved glossary definitions.
 - [ ] Check that all deliverables use the same taxonomy and glossary.
 - [ ] Check that each HLD, risk, and roadmap item fits the scenario facts.
 - [ ] Check that the work protects enterprise value, not just compliance posture.
