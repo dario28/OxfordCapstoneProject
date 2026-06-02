@@ -1,6 +1,6 @@
 # Capstone Deliverables Index
 
-Use this file as the professor-facing entry point for the Nordhaven-LumaPay AI Risk in M&A capstone. The final presentation deck is in this folder; the technical appendix evidence remains linked in its source folders so each item can be opened directly.
+This file is the professor-facing entry point for the Nordhaven-LumaPay AI Risk in M&A capstone. The final presentation deck is in this folder; the technical appendix evidence remains linked in its source folders so each item can be opened directly.
 
 ## Final Submission Deliverables
 
