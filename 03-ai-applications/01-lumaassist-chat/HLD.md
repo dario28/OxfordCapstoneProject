@@ -19,11 +19,13 @@
 ## 3. Core Workflow
 1. Customer sends a message through web or mobile chat.
 2. Request passes through an application API and session service.
-3. Orchestrator retrieves approved knowledge content and customer context.
-4. If needed, the assistant calls internal `MCP` tools for CRM lookup, ticket status, or knowledge retrieval.
-5. Prompt is assembled and sent to a Bedrock-hosted model.
-6. Response is returned to the customer or escalated to a human agent.
-7. Prompt, tool, and response traces are stored for review and tuning.
+3. Input guard checks for prompt injection, unsafe content, sensitive data, and context-boundary violations.
+4. Orchestrator retrieves approved knowledge content and authorization-filtered customer context.
+5. If needed, the assistant calls internal `MCP` tools for CRM lookup, ticket status, or knowledge retrieval.
+6. Prompt is assembled and sent to a Bedrock-hosted model.
+7. Output guard checks generated response for `PII`, internal secrets, policy breaches, and unsupported claims.
+8. Response is returned to the customer or escalated to a human agent.
+9. Prompt, tool, and response traces are stored for review and tuning, subject to redaction and retention controls.
 
 ## 4. AWS Architecture
 
@@ -52,6 +54,7 @@ flowchart LR
 - Cross-border flows: prompts and traces may contain PII if masking is weak, which matters for `GDPR` and `UK GDPR`
 - Current-state issue: copied customer `PII` in `test` increases the chance that prompt testing and trace review expose live personal data
 - MCP exposure: over-broad tool access can expose live customer records or trigger unauthorized ticket and case actions
+- Guardrail design: prompt injection should be mitigated before model invocation through input guard, prompt isolation, pattern detection, and context-boundary enforcement; data leakage should be mitigated during retrieval through authorization-aware RAG and after generation through output guard
 
 ## 6. Hosting And Operations
 - `test`: prompt library testing, jailbreak testing, evaluation datasets, copied unredacted customer `PII`, and test `MCP` tools connected to lower-environment CRM and ticketing data
@@ -59,6 +62,7 @@ flowchart LR
 - Identity and access: IAM roles for model invocation, knowledge indexing, and support analytics
 - Logging and evidence: CloudWatch app logs, CloudTrail, Datadog service telemetry, LangSmith traces, MCP tool invocation logs
 - Monitoring and drift: response quality, escalation rate, hallucination reports, prompt-injection patterns, sensitive-data leakage signals, unusual MCP tool calls
+- Evaluation pipeline: adversarial testing, red-team scenarios, jailbreak tests, reliability checks, and leakage tests should run separately from the live request path and gate prompt or retrieval changes
 
 ## 7. Lifecycle View
 - Design: allowed use cases, banned content, and escalation boundaries must be clearly defined
@@ -66,6 +70,7 @@ flowchart LR
 - Develop: prompt templates, guardrails, retrieval logic, and MCP tool schema definitions need versioning and review
 - Deploy: prompt or model changes should be promoted through `test` with evaluation evidence
 - Monitor: LangSmith and Datadog should support quality reviews, leakage checks, MCP misuse detection, and abuse monitoring
+- Continuous evaluation: prompt injection, data leakage, overreliance, and excessive-agency scenarios should be tracked as regression tests after each prompt, model, retrieval, or MCP schema change
 
 ## 8. Enterprise Risk Lenses
 - Governance lens: define what the assistant is allowed to say, when it must defer, and who approves prompt changes
@@ -73,6 +78,6 @@ flowchart LR
 - Cyber lens: prompt injection, data leakage, exposed endpoints, API-key misuse, MCP tool abuse, and trace exposure of copied `PII` are primary threats
 
 ## 9. Standards And Evidence
-- Primary standards and regulations: `OWASP LLM Top 10`, `MITRE ATLAS`, `NIST CSF`, `GDPR`, `UK GDPR`, `ISO/IEC 42001`
-- Due-diligence artefacts to request: prompt library, evaluation results, leakage tests, LangSmith trace policy, MCP tool inventory, MCP permission matrix, escalation rules, privacy controls, lower-environment data-handling rules, retention settings
+- Primary standards and regulations: `OWASP LLM Top 10`, `OWASP MCP` themes, `MITRE ATLAS`, `NIST CSF`, `GDPR`, `UK GDPR`, `ISO/IEC 42001`
+- Due-diligence artefacts to request: prompt library, input-guard and output-guard design, evaluation results, red-team and leakage tests, LangSmith trace policy, MCP tool inventory, MCP permission matrix, escalation rules, privacy controls, lower-environment data-handling rules, retention settings
 - Audit evidence expected: prompt approval records, incident playbooks, access logs, content-filter configurations, model usage logs, MCP invocation logs, evidence of whether `test` traces include live `PII`

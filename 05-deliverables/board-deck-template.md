@@ -187,7 +187,21 @@ Show how Nordhaven reduces inherited risk quickly and practically.
 **Source File**
 - [100-day-ai-integration-roadmap.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/100-day-ai-integration-roadmap.md)
 
-## Slide 10: Board Decisions And Escalation Asks
+## Slide 10: Standards Traceability
+**Slide Objective**
+Show that the board recommendations trace to specific framework clauses, articles, functions, or recognized control topics.
+
+**Must Highlight**
+- `NIST AI RMF` as the primary `Govern / Map / Measure / Manage` anchor
+- `EU AI Act` high-risk classification and Articles `9-17`, `72`
+- `GDPR` / `UK GDPR` data minimisation, security, DPIA, and transfer obligations
+- `ISO/IEC 42001`, `ISO/IEC 27001`, `DORA`, and `ISO/IEC 27036`
+- `OWASP LLM`, `OWASP Agentic`, `OWASP MCP`, and `MITRE ATLAS` for LLM, agentic, and MCP cyber risks
+
+**Source File**
+- [clause-traceability-matrix.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/clause-traceability-matrix.md)
+
+## Slide 11: Board Decisions And Escalation Asks
 **Slide Objective**
 End with concrete decisions rather than a passive summary.
 

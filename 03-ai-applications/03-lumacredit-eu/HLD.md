@@ -14,6 +14,7 @@
 - Third-party credit-check APIs used to enrich applicant data with bureau and affordability signals
 - Human-in-the-loop design for manual review when model confidence, affordability, or policy thresholds are breached
 - Key substrate properties: `opacity`, `drift`, `dependency`
+- Regulatory classification: expected `EU AI Act` Annex III 5(b) high-risk creditworthiness / credit-scoring system; fraud-detection-only exception does not apply to this system
 
 ## 3. Core Workflow
 1. Merchant checkout or lending workflow calls an internal decision API.
@@ -52,6 +53,7 @@ flowchart LR
 - Cross-border flows: EU and UK decision data may be stored or backed up in `US-hosted` cloud services, creating `GDPR` concerns
 - Current-state issue: unredacted customer `PII` has been copied into `test` for model validation and threshold testing
 - Third-party dependency issue: weak contract governance or API failure at a credit-check provider can directly affect lending decisions, fallback logic, and explainability
+- Fairness and fundamental-rights risk: biased training data, proxy variables, missing data, or model drift could create unfair denial of credit, discriminatory outcomes, or incorrect credit scoring
 
 ## 6. Hosting And Operations
 - `test`: currently contains unredacted `PII` copied from production-like datasets for model validation, threshold testing, and troubleshooting
@@ -59,6 +61,7 @@ flowchart LR
 - Identity and access: IAM roles for model deployment, app runtime, and analyst read-only review
 - Logging and evidence: CloudWatch, CloudTrail, decision logs in Aurora, service metrics in Datadog
 - Monitoring and drift: model performance, approval-rate shifts, bad-debt indicators, feature drift, manual review volume
+- Fairness monitoring: disparate-impact metrics, decline appeal trends, override trends, and segment-level performance should be reviewed alongside standard drift and loss indicators
 
 ## 7. Lifecycle View
 - Design: model purpose, fairness assumptions, approval criteria, and board risk appetite should be documented
@@ -66,6 +69,8 @@ flowchart LR
 - Develop: code, feature logic, and model changes need versioning and sign-off
 - Deploy: model promotion from `test` to `production` should be gated and logged, and API dependency changes should follow the same approval path
 - Monitor: drift, error rates, complaint themes, approval bias indicators, and third-party API latency or failure patterns should be tracked
+- Traceability: every decision should be reconstructable to model version, feature vector, bureau inputs, policy rules, reason codes, and reviewer action where applicable
+- Robustness: edge cases, unusual applicants, bureau outages, data-quality failures, and adversarial or manipulated inputs should be tested before release
 
 ## 8. Enterprise Risk Lenses
 - Governance lens: high-risk AI classification, model ownership, explainability expectations, and approval accountability
@@ -73,6 +78,6 @@ flowchart LR
 - Cyber lens: inference endpoint abuse, privileged data access, insecure third-party credit-check integrations, and exposed lower-environment `PII` are key concerns
 
 ## 9. Standards And Evidence
-- Primary standards and regulations: `EU AI Act Annex III`, `ISO/IEC 42001`, `ISO/IEC 5259`, `GDPR`, `UK GDPR`, `PCI DSS`, `NIST AI RMF`
-- Due-diligence artefacts to request: model documentation, validation reports, feature lineage, DPIA, lower-environment data-masking policy, approval workflow records, credit-policy rules, third-party credit-check API contracts, SLAs, audit logs
-- Audit evidence expected: deployment approvals, model performance reviews, access logs, retention settings, manual-review procedures, third-party API review records, and evidence of `test` data sanitization or lack thereof
+- Primary standards and regulations: `EU AI Act` Annex III 5(b), Articles `9-17` and `72`; `ISO/IEC 42001`; `ISO/IEC 5259`; `GDPR`; `UK GDPR`; `PCI DSS`; `NIST AI RMF`
+- Due-diligence artefacts to request: high-risk classification memo, model card, validation reports, feature lineage, fairness assessment, DPIA, lower-environment data-masking policy, approval workflow records, credit-policy rules, third-party credit-check API contracts, SLAs, audit logs
+- Audit evidence expected: deployment approvals, model performance reviews, fairness and drift dashboards, access logs, retention settings, manual-review procedures, third-party API review records, and evidence of `test` data sanitization or lack thereof

@@ -28,11 +28,12 @@ Nordhaven is acquiring a high-growth AI-intensive fintech whose control maturity
 The transaction creates immediate AI risk not because LumaPay lacks value, but because Nordhaven inherits regulated credit models, customer-facing LLM workflows, agentic tooling, third-party AI dependence, and copied live `PII` in `test` before governance and security controls are aligned.
 
 **Top Board Risks**
-- Live customer `PII` has been copied into lower environments without masking, creating immediate privacy, confidentiality, and regulatory exposure.
-- `LumaCredit-EU` appears to operate as a high-risk credit-decision system with incomplete documentation, weak evidence of accountability, and limited lifecycle assurance.
+- No named Day 1 owner, RACI, or board-approved AI appetite exists for the combined AI estate, creating an accountability gap before control uplift is complete.
+- Unknown shadow AI and undocumented tools may still affect customers while remaining invisible to Nordhaven, auditors, and the Group Risk Committee.
+- `LumaCredit-EU` appears to operate as a high-risk credit-decision system with incomplete EU AI Act evidence, weak explanation capability, and unproven fairness monitoring.
 - `LumaAssist Chat` and `AutoUnderwriter Agent` rely on `MCP` tool access that could turn prompt failure or over-broad permissions into direct data or workflow misuse.
 - `FraudShield` introduces third-party opacity, continuity, and change-of-control risk during the transaction window.
-- A `12–18 month` interim operating period creates governance misalignment between Nordhaven’s enterprise risk model and LumaPay’s fast-moving engineering culture.
+- Live customer `PII` has been copied into lower environments without masking, creating immediate privacy, confidentiality, and regulatory exposure.
 
 **Board Decisions Requested**
 - Approve an interim AI governance model for the integration period.
@@ -107,12 +108,12 @@ The most material risks are inherited-state control failures that can create cus
 
 | Risk | Why It Matters | Lifecycle Stage | Primary Reference |
 | --- | --- | --- | --- |
-| `R-01` Unredacted `PII` in `test` | Live personal data is already outside intended production boundaries, creating immediate privacy and security exposure. | Data / Develop | `GDPR`, `UK GDPR`, `ISO/IEC 27001` |
-| `R-02` High-risk AI governance gap in `LumaCredit-EU` | Nordhaven may inherit a credit-decision system without complete accountability, validation, and evidence packs. | Design / Deploy | `EU AI Act`, `ISO/IEC 42001`, `NIST AI RMF` |
-| `R-04` Prompt injection against `LumaAssist Chat` | Customer input may manipulate the assistant into bypassing controls or exposing restricted information. | Deploy / Monitor | `OWASP LLM Top 10`, `MITRE ATLAS`, `NIST CSF` |
-| `R-08` MCP tool overreach in `AutoUnderwriter Agent` | Excessive tool permissions could turn reasoning failure into direct misuse of underwriting, identity, or document systems. | Develop / Deploy | `ISO/IEC 27001`, `OWASP LLM Top 10`, `NIST CSF` |
-| `R-10` Fraud vendor change-of-control disruption | Critical third-party fraud services may become unstable or contested during the transaction. | Deploy | `DORA`, `ISO/IEC 27036`, `NIST CSF` |
-| `R-12` Governance misalignment during parallel operations | Nordhaven and LumaPay currently operate different risk expectations, evidence standards, and escalation paths. | Design / Deploy / Monitor | `NIST AI RMF`, `ISO/IEC 42001` |
+| `R-12` Governance misalignment during parallel operations | No single combined-entity accountability model means inherited risk may be accepted accidentally rather than by Board decision. | Design / Deploy / Monitor | `NIST AI RMF` Govern; `ISO/IEC 42001` Cl.5 |
+| `R-13` Shadow AI and undocumented tools | Undiscovered LumaPay AI can create customer, regulatory, and evidence risk from Day 1 while remaining outside the registry. | Design / Deploy | `NIST AI RMF` Map; `EU AI Act` Art. 6-7 |
+| `R-02` High-risk AI governance gap in `LumaCredit-EU` | Nordhaven may inherit an Annex III credit-decision system without complete model cards, conformity evidence, accountability, validation, or oversight records. | Full lifecycle | `EU AI Act` Annex III 5(b), Art. 9-17; `ISO/IEC 42001` |
+| `R-08` MCP tool overreach in `AutoUnderwriter Agent` | Excessive tool permissions could turn reasoning failure into direct misuse of underwriting, identity, affordability, or document systems. | Develop / Deploy | `ISO/IEC 27001`; `OWASP Agentic`; `OWASP MCP`; `NIST CSF` |
+| `R-10` Fraud vendor change-of-control disruption | Critical third-party fraud services may become unstable, contested, or unavailable during the transaction. | Deploy | `DORA` Art. 28, 30; `ISO/IEC 27036` |
+| `R-01` Unredacted `PII` in `test` | Live personal data is already outside intended production boundaries, creating immediate privacy and security exposure. | Data / Develop | `GDPR` Art. 5, 25, 32; `ISO/IEC 27001` A.8.31 |
 
 **Takeaway**
 These are not isolated issues. They compound each other during the interim operating phase.
@@ -125,10 +126,14 @@ Pre-close diligence should focus on the evidence gaps most likely to affect lega
 
 **Priority Evidence Requests**
 - Environment inventory and proof of whether live `PII` exists in `test` or other lower environments
+- Complete AI asset inventory, including shadow tools, departmental scripts, informal assistants, and registry gaps
 - `LumaCredit-EU` model documentation, validation evidence, and ownership records
+- Model cards or system cards for all four in-scope systems
+- Board-level AI governance policy, RACI, decision-rights matrix, and risk-appetite statement
 - `MCP` inventory, tool permission matrix, and approval model for LLM and agent workflows
 - Logging, trace-retention, and redaction controls for prompts and AI observability data
-- Vendor contracts, assignment rights, and fallback assumptions for `FraudShield` and other critical suppliers
+- Vendor contracts, assignment rights, SLAs, audit rights, incident rights, and fallback assumptions for `FraudShield`, foundation models, and critical suppliers
+- Human-in-the-loop evidence, reviewer rationale samples, and override-rate dashboards for credit and underwriting decisions
 
 **Board Message**
 If these artefacts cannot be produced quickly, Nordhaven should assume higher inherited risk and govern accordingly.
@@ -140,10 +145,11 @@ If these artefacts cannot be produced quickly, Nordhaven should assume higher in
 The transaction should be viewed through three lenses simultaneously because failures in one area cascade into the others.
 
 **Governance Lens**
-- Weak AI registry discipline
-- fragmented ownership
-- incomplete documentation
-- inconsistent approval and escalation paths
+- Day 1 accountability owner not named
+- shadow AI inventory incomplete
+- RACI and decision rights not documented across lifecycle stages
+- AI risk appetite and escalation triggers not approved
+- model cards, conformity evidence, and documentation incomplete
 
 **Operational Lens**
 - drift risk in credit and fraud systems
@@ -160,6 +166,13 @@ The transaction should be viewed through three lenses simultaneously because fai
 **Takeaway**
 The interim phase amplifies all three lenses at once.
 
+**Five Governance Choices**
+- Name the combined-estate accountability owner.
+- Approve interim risk appetite and breach triggers.
+- Require a unified AI registry and shadow AI discovery.
+- Establish RACI and stage-gates across all lifecycle stages.
+- Set escalation authority to halt or constrain high-risk systems.
+
 ---
 
 ## Slide 8: Interim AI Risk Appetite And Tolerance
@@ -170,7 +183,7 @@ Nordhaven should operate with low or very low appetite for inherited AI risks th
 | --- | --- | --- |
 | `Opacity` | Low | No high-impact system should remain materially undocumented beyond `60` days post-close. |
 | `Autonomy` | Very low | `0` autonomous high-impact credit or customer actions without human approval. |
-| `Dependency` | Low | All critical AI vendors and MCP-connected tools must have owners, inventory entries, and fallback assumptions within `60` days. |
+| `Dependency` | Moderate, actively managed | All critical AI vendors and MCP-connected tools must have owners, inventory entries, and fallback assumptions within `60` days. |
 | `Drift` | Low | All in-scope production models need thresholds, review owners, and escalation routes within `60` days. |
 | `Scale Asymmetry` | Very low | No material AI expansion without registry entry, owner assignment, and interim governance coverage. |
 
@@ -179,6 +192,9 @@ Nordhaven should operate with low or very low appetite for inherited AI risks th
 - unapproved autonomous high-impact decisions
 - critical AI dependencies with no owner or fallback
 - production AI changes outside the interim stage-gate
+- unexplained high-risk credit or underwriting decision in production
+- customer-affecting AI system operating outside the unified AI registry
+- human review that lacks rationale, challenge evidence, or meaningful override monitoring
 
 ---
 
@@ -188,12 +204,14 @@ Nordhaven can materially reduce inherited AI risk in the first `100 days` withou
 
 **Day `0–30`**
 - stop further copying of live `PII`
-- inventory AI systems, dependencies, and MCP tools
-- establish interim AI governance forum
+- appoint a named Day 1 AI accountability owner
+- inventory AI systems, dependencies, MCP tools, and shadow AI
+- establish interim AI governance forum, RACI, and risk appetite
 - reduce high-risk MCP permissions
 
 **Day `31–60`**
-- classify `LumaCredit-EU` formally as high-risk AI
+- classify all four AI systems under `EU AI Act` risk tiers
+- complete `ISO/IEC 42001` gap analysis and model / system cards
 - build minimum evidence pack for credit decisioning
 - introduce drift thresholds and trace controls
 - complete critical vendor change-of-control review
@@ -201,7 +219,7 @@ Nordhaven can materially reduce inherited AI risk in the first `100 days` withou
 **Day `61–100`**
 - run targeted red-team and abuse-case testing
 - publish AI-specific incident playbooks
-- approve interim appetite and tolerance statements
+- deploy Board AI Risk Dashboard and first monthly KRI review
 - formalize unified AI registry and stage-gate model
 
 **Board Message**
@@ -209,7 +227,27 @@ The objective is not perfection in `100` days; it is to move the combined entity
 
 ---
 
-## Slide 10: Board Decisions And Escalation Asks
+## Slide 10: Standards Traceability
+
+**Headline**
+The proposed controls are clause-traceable across AI governance, privacy, operational resilience, cyber, and supplier-risk frameworks.
+
+| Standard | Where It Applies | Primary Capstone Use |
+| --- | --- | --- |
+| `NIST AI RMF` | All four systems | Board structure across `Govern`, `Map`, `Measure`, `Manage` |
+| `EU AI Act` | `LumaCredit-EU`; classification review for AutoUnderwriter | Annex III high-risk classification, Art. `9-17`, Art. `72` |
+| `GDPR` / `UK GDPR` | Personal data, traces, lower environments, cross-border flows | Data minimisation, security, DPIA, transfer evidence |
+| `ISO/IEC 42001` | AI management system | Roles, risk assessment, treatment, lifecycle controls, monitoring |
+| `ISO/IEC 27001` | MCP tools, logging, access, environments | Access control, supplier controls, logging, secure development, test-production segregation |
+| `DORA` / `ISO/IEC 27036` | FraudShield and critical suppliers | Vendor continuity, change-of-control, audit rights, fallback planning |
+| `OWASP LLM`, `OWASP Agentic`, `OWASP MCP`, `MITRE ATLAS` | LumaAssist and AutoUnderwriter | Prompt injection, excessive agency, MCP authorization, adversarial testing |
+
+**Board Message**
+Every top risk and material control should trace back to the technical appendix, not stand alone as an assertion.
+
+---
+
+## Slide 11: Board Decisions And Escalation Asks
 **Headline**
 The Board should leave this review with explicit ownership, funding, and escalation decisions.
 

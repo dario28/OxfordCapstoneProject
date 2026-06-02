@@ -12,6 +12,7 @@
 - Vendor-hosted fraud-detection model accessed over API
 - Local decision wrapper in AWS to apply thresholds and route exceptions
 - Human review for flagged or ambiguous cases
+- Current-state fallback clarification: the HLD assumes manual or rules-based fail-safe fallback decisions; a deployed internal SageMaker fallback model is not evidenced and should not be claimed until tested
 - Key substrate properties: `dependency`, `opacity`, `scale asymmetry`
 
 ## 3. Core Workflow
@@ -46,10 +47,11 @@ flowchart LR
 
 ## 6. Hosting And Operations
 - `test`: mocked vendor responses, threshold tuning, synthetic fraud scenarios
-- `production`: live fraud API integration, rate limits, fail-safe fallback decisions
+- `production`: live fraud API integration, rate limits, manual or rules-based fail-safe fallback decisions; internal model fallback requires separate evidence if claimed
 - Identity and access: API credentials in Secrets Manager, Lambda execution roles, read-only fraud analyst access
 - Logging and evidence: CloudWatch, CloudTrail, Datadog telemetry, vendor SLA and incident records
 - Monitoring and drift: API latency, vendor outage rate, false-positive shifts, fraud-loss trends, manual review volume
+- Resilience monitoring: circuit-breaker activation, fallback queue volume, vendor SLA breaches, assignment-rights status, and concentration-risk exposure should be tracked
 
 ## 7. Lifecycle View
 - Design: third-party dependency and exit strategy should be explicit
@@ -57,6 +59,7 @@ flowchart LR
 - Develop: wrapper logic, thresholds, and fallback rules require versioning
 - Deploy: key rotation, API changes, and release coordination are critical
 - Monitor: vendor outages, score drift, and contractual changes must be tracked continuously
+- Fallback validation: manual review and rules-based fallback should be tested; any claim of model fallback must include deployment, failover, and performance evidence
 
 ## 8. Enterprise Risk Lenses
 - Governance lens: ownership of vendor risk, model explainability expectations, and contract accountability must be clear
@@ -65,5 +68,5 @@ flowchart LR
 
 ## 9. Standards And Evidence
 - Primary standards and regulations: `ISO/IEC 27036`, `DORA`, `NIST CSF`, `GDPR`, `UK GDPR`, `PCI DSS`
-- Due-diligence artefacts to request: vendor contract, change-of-control clauses, SLA, security addendum, data-processing agreement, incident history, audit reports
-- Audit evidence expected: API credential controls, fallback design, vendor review records, outage runbooks, evidence of contractual rights
+- Due-diligence artefacts to request: vendor contract, change-of-control clauses, SLA, security addendum, data-processing agreement, incident history, audit reports, fallback runbook, concentration-risk assessment
+- Audit evidence expected: API credential controls, fallback design, failover or manual-review test evidence, vendor review records, outage runbooks, evidence of contractual rights

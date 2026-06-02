@@ -18,7 +18,8 @@ Board-level pack for a `Group Risk Committee` audience with limited technical de
 7. AI-specific cyber and monitoring enhancements
 8. Risk-appetite and tolerance statements
 9. `100-day` AI integration and governance plan
-10. Board decisions and escalation asks
+10. Standards traceability
+11. Board decisions and escalation asks
 
 ## Slide 9 Guidance
 - separate `day 0–30`, `31–60`, and `61–100`
@@ -33,6 +34,12 @@ Board-level pack for a `Group Risk Committee` audience with limited technical de
 - `EU AI Act`
 - `GDPR`
 - `ISO/IEC 27001`
+- `ISO/IEC 42001`
+- `DORA`
+- `ISO/IEC 27036`
+- `OWASP LLM Top 10`
+- `OWASP Agentic Top 10`
+- `OWASP MCP` themes
 - Additional standards as needed per slide
 
 ## Supporting Drafts
