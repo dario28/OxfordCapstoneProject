@@ -52,7 +52,7 @@ This workspace is aligned to the full `AI Risk in M&A` capstone brief and the re
 - [04-risk-and-controls](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls): risk register, due-diligence, standards mapping
 - [04-risk-and-controls/glossary-taxonomy-and-evidence-rules.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/glossary-taxonomy-and-evidence-rules.md): glossary-aligned taxonomy and evidence quality gate
 - [04-risk-and-controls/clause-traceability-matrix.md](/Users/dquigley/Documents/Codex/projects/capstone/04-risk-and-controls/clause-traceability-matrix.md): clause, article, and function traceability matrix
-- [05-deliverables](/Users/dquigley/Documents/Codex/projects/capstone/05-deliverables): board pack and appendix outlines
+- [05-deliverables/README.md](/Users/dquigley/Documents/Codex/projects/capstone/05-deliverables/README.md): professor-facing deliverables index linking to the board pack, appendix, HLDs, and supporting evidence
 
 ## Recommended Drafting Order
 1. Lock the LumaPay company profile and transitional deal assumptions.
