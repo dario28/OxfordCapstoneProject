@@ -7,6 +7,7 @@ This file is the professor-facing entry point for the Nordhaven-LumaPay AI Risk 
 | Deliverable | File | Purpose / Notes |
 | --- | --- | --- |
 | Deliverable A - Final board presentation | [Nordhaven_LumaPay_AI_Integration.pptx](./Nordhaven_LumaPay_AI_Integration.pptx) | Final Board / Group Risk Committee presentation deck. |
+| Deliverable A - Final board deck source | [board-deck-Final.md](./board-deck-Final.md) | Final Marp markdown source for the Board / Group Risk Committee deck. |
 | Deliverable A - Board deck source draft | [board-deck-draft-v1.md](./board-deck-draft-v1.md) | Markdown source retained for traceability of the board-pack narrative. |
 | Deliverable B - Technical appendix outline | [technical-appendix-outline.md](./technical-appendix-outline.md) | Defines the technical appendix structure and evidence pack. |
 | Deliverable B1 - AI risk register extract | [risk-register-template.md](../04-risk-and-controls/risk-register-template.md) | Consolidated `R-01` to `R-18` AI risk register with owners, KRIs, appetite triggers, and framework references. |
