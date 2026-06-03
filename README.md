@@ -23,7 +23,7 @@ This workspace is aligned to the full `AI Risk in M&A` capstone brief and the re
 - `FraudShield`
 
 ## Required Deliverables
-- `Deliverable A`: board-level pack
+- `Deliverable A`: board-level pack - [Governing_Inherited_AI_Risks_Final_Deck.pptx](05-deliverables/Governing_Inherited_AI_Risks_Final_Deck.pptx)
 - `Deliverable B`: technical appendix
 
 ## Primary Framework Anchor
